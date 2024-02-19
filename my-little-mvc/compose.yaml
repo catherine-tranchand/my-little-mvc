@@ -1,0 +1,15 @@
+services:
+  db:
+    image: 'mysql:latest'
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_PASSWORD: pass
+      MYSQL_USER: user
+      MYSQL_DATABASE: mvc
+    ports:
+      - '5432:3306'
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - '9080:8080'
